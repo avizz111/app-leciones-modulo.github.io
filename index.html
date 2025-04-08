@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Curso 5: Las Tablas</h1>
+        <h3>En esta sesión aprenderás que son las tablas</h3>
+    </header>
+    <main>
+        <article id="que_son">
+            <h2>¿Qué son las tablas?</h2>
+            <p>Las tablas tal como en nuestro día a día son cuadros donde podemos poner información en filas y columnas
+            </p>
+            <div class="ejemplos">
+                <t3>EJEMPLO</t3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Ciudad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>27</td>
+                            <td>León</td>
+                        </tr>
+                        <tr>
+                            <td>María López</td>
+                            <td>34</td>
+                            <td>Guadalajara</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos García</td>
+                            <td>22</td>
+                            <td>Monterrey</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Martínez</td>
+                            <td>29</td>
+                            <td>Puebla</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+        <article id="ejercicio_1">
+            <h3>¿Qué se componen las tablas?</h3>
+            <button id="correcto_1.1" onclick="correcto_pregunta_1()">
+                Filas y columnas
+            </button>
+            <button id="mal_1.1" onclick="mal_pregunta1_1()">
+                Listas
+            </button>
+            <button id="mal_1.2" onclick="mal_pregunta1_2()">
+                Números
+            </button>
+            <button id="mal_1.3" onclick="mal_pregunta1_3()">
+                Encabezados y textos
+            </button>
+        </article>
+        <article id="declaracion">
+            <h2>¿Cómo declarar una tabla?</h2>
+            <p>Para poder declarar una tabla se debe usar la etiqueta <mark>&lt;table&gt;</mark> y dentro de estas se
+                pondrán todas las etiquetas que la formaran.</p><br>
+            <p>Las primeras etiquetas que se ponen son las de filas <mark>&lt;tr&gt;</mark>, seguido de esto se ponen
+                las etiquetas <mark>&lt;th&gt;</mark> o <mark>&lt;td&gt;</mark> las cuales se usan para celdas de
+                títulos o celdas de datos respectivamente</p>
+            <div class="ejemplos">
+                <code>
+                    <pre>
+&lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nombre&lt;/th&gt;
+            &lt;th&gt;Edad&lt;/th&gt;
+            &lt;th&gt;Ciudad&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Juan Pérez&lt;/td&gt;
+            &lt;td&gt;27&lt;/td&gt;
+            &lt;td&gt;León&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tr&gt;
+            &lt;td&gt;María López&lt;/td&gt;
+            &lt;td&gt;34&lt;/td&gt;
+            &lt;td&gt;Guadalajara&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Carlos García&lt;/td&gt;
+            &lt;td&gt;22&lt;/td&gt;
+            &lt;td&gt;Monterrey&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Sofia Martínez&lt;/td&gt;
+            &lt;td&gt;29&lt;/td&gt;
+            &lt;td&gt;Puebla&lt;/td&gt;
+        &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </code>
+                <button class="run" id="correr_cod_1" onclick="llamada_1()">correr</button>
+            </div>
+            <div id="tabla_correr_1" class="ejemplos">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Ciudad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>27</td>
+                            <td>León</td>
+                        </tr>
+                        <tr>
+                            <td>María López</td>
+                            <td>34</td>
+                            <td>Guadalajara</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos García</td>
+                            <td>22</td>
+                            <td>Monterrey</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Martínez</td>
+                            <td>29</td>
+                            <td>Puebla</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+        <article id="ejercicio_2">
+            <h3>¿Cuál etiqueta sirve para hacer filas?</h3>
+            <button id="mal_2.1" onclick="mal_pregunta2_1()">
+                &lt;td&gt;
+            </button>
+            <button id="mal_2.2" onclick="mal_pregunta2_2()">
+                &lt;th&gt;
+            </button>
+            <button id="correcto_2.1" onclick="correcto_pregunta_2()">
+                &lt;tr&gt;
+            </button>
+            <button id="mal_2.3" onclick="mal_pregunta2_3()">
+                &lt;table&gt;
+            </button>
+        </article>
+        <article id="atributos">
+            <h2>Atributos de las tablas</h2>
+            <p>Como cualquier etiqueta de HTML las de las tablas no tienen excepción y estas pueden ser para fines prácticos o de diseño las cuales son</p><br>
+            <div class="ejemplos">
+                <ol>
+                    <li>
+                        &lt;table&gt;
+                        <ul>
+                            <li>                            
+                                border: define el ancho del borde de la tabla
+                            </li>
+                            <li>
+                                cellpadding: define el espacio entre el contenido de una celda y su borde
+                            </li>
+                            <li>
+                                cellspacing: define el espacio entre las celdas
+                            </li>
+                            <li>
+                                width: define el ancho de la tabla
+                            </li>
+                            <li>
+                                summary: da un resumen para lectores de pantalla
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        &lt;tr&gt;
+                        <ul>
+                            <li>
+                                align: alinea horizontalmente el contenido
+                            </li>
+                            <li>
+                                bgcolor: define el color de la fila
+                            </li>
+                            <li>
+                                valign: alinea el contenido de manera vertical
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        &lt;th&gt;
+                        <ul>
+                            <li>
+                                colspan: combina varias columnas en una sola celda
+                            </li>
+                            <li>
+                                rowspan: combina varias filas en una sola celda
+                            </li>
+                            <li>
+                                scope: define el ámbito de la celda de encabezado
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        &lt;td&gt;
+                        <ul>
+                            <li>
+                                colspan: combina columnas en una celda
+                            </li>
+                            <li>
+                                rowspan: combina filas en una celda
+                            </li>
+                            <li>
+                                headers: referencia a celdas de encabezado relacionadas con esta celda
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </article>
+        <article id="ejercicio_3">
+            <h3>¿Qué atributo combina varias columnas en una sola celda?</h3>
+            <button id="mal_3.1" onclick="mal_pregunta3_1()">
+                scope
+            </button>
+            <button id="mal_3.2" onclick="mal_pregunta3_2()">
+                bgcolor
+            </button>
+            <button id="mal_3.3" onclick="mal_pregunta3_3()">
+                rowspan
+            </button>
+            <button id="correcto_3.1" onclick="correcto_pregunta_3()">
+                colspan
+            </button>
+        </article>
+        <article id="fin">
+            <h2><b>¡Espera la continuación!</b></h2>
+            <img src="https://cdn-icons-png.flaticon.com/512/16183/16183567.png" alt="">
+        </article>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
