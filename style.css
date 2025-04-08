@@ -98,7 +98,7 @@ ol{
 
 img{
     display: inline-block;
-    width: 50vmin;
+    width: 50vw;
     height: 70vh;
     margin: 0 25vw;
 }
