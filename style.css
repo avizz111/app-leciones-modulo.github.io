@@ -98,6 +98,6 @@ ol{
 
 img{
     display: inline-block;
-    width: 80vw;
-    margin: 0 10vw;
+    width: 80vmin;
+    margin: 10 vmin;
 }
