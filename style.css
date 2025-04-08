@@ -98,6 +98,7 @@ ol{
 
 img{
     display: inline-block;
-    width: 60vmin;
-    margin: 0 20vmin;
+    width: 40vmin;
+    height: 70vh;
+    margin: 0 30vmin;
 }
