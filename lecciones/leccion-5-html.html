@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso 5: Las Tablas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        pre {
+            background-color: #e9ecef;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 1rem 0;
+            margin-top: 3rem;
+        }
+
+        .reflection {
+            background-color: #fff3cd;
+            padding: 1rem;
+            border-left: 5px solid #ffc107;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="bg-danger text-bg-primary text-center py-4">
+        <h1>Curso 5: Las Tablas</h1>
+        <p class="lead">En esta sesión aprenderás que son las tablas</p>
+    </header>
+
+    <main class="container my-5">
+        <section class="mb-5">
+            <h2>¿Qué son las tablas?</h2>
+            <p>Las tablas tal como en nuestro día a día son cuadros donde podemos poner información en filas y columnas
+            </p>
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Nombre&lt;/td&gt;
+        &lt;td&gt;Edad&lt;/td&gt;
+        &lt;td&gt;Ciudad&lt;/td&gt;
+    &lt;/tr&gt;
+...
+&lt;table&gt;
+</pre>
+        </section>
+        <section class="mb-5">
+            <h2>Filas</h2>
+            <p>Las filas son la primera etiqueta que se pone en la tabla para después poner cada celda individualmente,
+                la etiqueta es: <code>&lt;tr&gt;</code>:</p>
+            <pre>
+&lt;tr&gt;
+...
+&lt;/tr&gt;
+            </pre>
+            <p>La forma completa es:</p>
+            <pre>
+&lt;table&gt;
+    &lt;tr&gt; 
+    ...
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+</pre>
+        </section>
+        <section class="mb-5">
+            <h2>Celdas</h2>
+            <p>Hay dos tipos principales de celdas:</p>
+            <h5>Celda de titulo:</h5>
+            <pre>
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;
+<b>Titulo</b>
+&lt;/th&gt;
+    &lt;/tr&gt;
+...
+&lt;/table&gt;
+</pre>
+
+            <h5>Celda de datos:</h5>
+            <pre>
+&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;
+            Datos
+            &lt;/td&gt;
+    &lt;/tr&gt;
+...
+&lt;/table&gt;
+</pre>
+        </section>
+
+        <section class="mb-5 row" style="align-items: center;">
+            <h2>Ejemplo</h2>
+            <p>Analiza el siguiente ejemplo:</p>
+            <pre class="col-12 col-md-6">
+        &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th&gt;Nombre&lt;/th&gt;
+        &lt;th&gt;Edad&lt;/th&gt;
+        &lt;th&gt;Ciudad&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Juan Pérez&lt;/td&gt;
+            &lt;td&gt;27&lt;/td&gt;
+            &lt;td&gt;León&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;/tr&gt;
+            &lt;td&gt;María López&lt;/td&gt;
+            &lt;td&gt;34&lt;/td&gt;
+            &lt;td&gt;Guadalajara&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Carlos García&lt;/td&gt;
+            &lt;td&gt;22&lt;/td&gt;
+            &lt;td&gt;Monterrey&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Sofia Martínez&lt;/td&gt;
+            &lt;td&gt;29&lt;/td&gt;
+            &lt;td&gt;Puebla&lt;/td&gt;
+        &lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+            <div class="col-12 col-md-6 py-4">
+                <table class="table border border-success-subtle">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Ciudad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>27</td>
+                            <td>León</td>
+                        </tr>
+                        <tr>
+                            <td>María López</td>
+                            <td>34</td>
+                            <td>Guadalajara</td>
+                        </tr>
+                        <tr>
+                            <td>Carlos García</td>
+                            <td>22</td>
+                            <td>Monterrey</td>
+                        </tr>
+                        <tr>
+                            <td>Sofia Martínez</td>
+                            <td>29</td>
+                            <td>Puebla</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <h2>Atributos</h2>
+            <p class="my-4">Atributos de &lt;table&gt;:</p>
+            <ul class="list-group">
+                <li class="list-group-item mx-4">border: define el ancho del borde de la tabla</li>
+                <li class="list-group-item mx-4">cellpadding: define el espacio entre el contenido de una celda y su borde</li>
+                <li class="list-group-item mx-4">cellspacing: define el espacio entre las celdas</li>
+                <li class="list-group-item mx-4">width: define el ancho de la tabla</li>
+                <li class="list-group-item mx-4">summary: da un resumen para lectores de pantalla</li>
+            </ul>
+            <ul class="list-group">
+                <p class="my-4">Atributos de &lt;tr&gt;:</p>
+                <li class="list-group-item mx-4">align: alinea horizontalmente el contenido</li>
+                <li class="list-group-item mx-4">bgcolor: define el color de la fila</li>
+                <li class="list-group-item mx-4">valign: alinea el contenido de manera vertical</li>
+            </ul>
+            <ul class="list-group">
+                <p class="my-4">Atributos de &lt;th&gt;:</p>
+                <li class="list-group-item mx-4">colspan: combina varias columnas en una sola celda</li>
+                <li class="list-group-item mx-4">rowspan: combina varias filas en una sola celda</li>
+                <li class="list-group-item mx-4">scope: define el ámbito de la celda de encabezado</li>
+            </ul>
+            <ul class="list-group">
+                <p class="my-4">Atributos de &lt;td&gt;:</p>
+                <li class="list-group-item mx-4">colspan: combina varias columnas en una sola celda</li>
+                <li class="list-group-item mx-4">rowspan: combina varias filas en una sola celda</li>
+                <li class="list-group-item mx-4">headers: referencia a celdas de encabezado relacionadas con esta celda</li>
+            </ul>
+        </section>
+
+        <section class="mb-5">
+            <button class="btn btn-primary m-5" onclick="mostrarAlerta()">¡Entendido!</button>
+        </section>
+
+        <section class="mt-5 reflection">
+            <h4>¿Qué te llevas de esta lección?</h4>
+            <p>Escribe un resumen o reflexión de lo que aprendiste:</p>
+            <textarea id="reflexionInput" class="form-control mb-3" rows="5"
+                placeholder="Ejemplo: Aprendí a usar etiquetas para texto, encabezados, listas y más..."></textarea>
+            <button class="btn btn-warning" onclick="enviarReflexion()">Enviar respuesta</button>
+        </section>
+    </main>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Curso de HTML - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        function mostrarAlerta() {
+            alert("¡Bien hecho! Terminaste el curso sobre texto en HTML.");
+        }
+
+        function enviarReflexion() {
+            const reflexion = document.getElementById("reflexionInput").value.trim();
+            if (reflexion) {
+                alert("Tu respuesta ha sido registrada:\n\n" + reflexion);
+            } else {
+                alert("Por favor escribe algo antes de enviar tu reflexión.");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
